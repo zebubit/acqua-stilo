@@ -95,8 +95,9 @@ h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;line-height:1.05;text-wrap:b
 .hero h1{font-size:clamp(2.6rem,6.4vw,4.6rem);letter-spacing:-.035em;margin:18px 0}
 .hero h1 span{display:block;color:var(--amarelo)}
 .hero p.sub{font-size:1.14rem;color:#e6f6fd;max-width:56ch}
-.hero-foto{position:relative;border-radius:var(--rg);overflow:hidden;box-shadow:0 26px 60px rgba(3,49,79,.4);aspect-ratio:4/4.2}
-.hero-foto img{width:100%;height:100%;object-fit:cover}
+.hero-foto{position:relative;border-radius:var(--rg);aspect-ratio:4/4.35;padding:7px;background:linear-gradient(150deg,var(--amarelo),var(--amarelo-esc) 55%,#e2a600);box-shadow:0 26px 60px rgba(3,49,79,.45)}
+.hero-foto::after{content:"";position:absolute;inset:0;border-radius:var(--rg);box-shadow:inset 0 0 0 1px rgba(255,255,255,.28);pointer-events:none}
+.hero-foto img{width:100%;height:100%;object-fit:cover;border-radius:calc(var(--rg) - 7px);display:block}
 .nota{display:flex;flex-wrap:wrap;gap:20px;margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid rgba(255,255,255,.24)}
 .nota div{font-weight:900;font-size:.95rem;color:#fff}
 .nota small{display:block;font-weight:700;color:#e6f6fe;font-size:.875rem;text-transform:uppercase;letter-spacing:.05em}
@@ -438,7 +439,7 @@ h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;line-height:1.05;text-wrap:b
       </div>
     </div>
     <div class="hero-foto">
-      <img src="img/hero.webp" alt="Criança sorrindo na piscina usando touca da Acqua Stilo" width="1154" height="1246" fetchpriority="high">
+      <img src="img/hero.webp" alt="Criança sorrindo na piscina usando touca da Acqua Stilo" width="1134" height="1291" fetchpriority="high">
     </div>
   </div>
 </section>
