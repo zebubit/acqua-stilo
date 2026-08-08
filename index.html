@@ -157,6 +157,24 @@ h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;line-height:1.05;text-wrap:b
 .ben-foot{margin-top:var(--s3);padding:26px 30px;border-radius:var(--r);background:var(--azul-esc);color:#d8ecf7;font-size:1.05rem}
 .ben-foot b{color:var(--amarelo)}
 
+/* ---------- fundadora ---------- */
+.funda{background:var(--branco)}
+.f-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:52px;align-items:center}
+.f-midia{position:relative}
+.f-foto{border-radius:var(--rg);overflow:hidden;box-shadow:0 22px 50px rgba(5,73,120,.2);aspect-ratio:4/5}
+.f-foto img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.f-video{position:absolute;right:-34px;bottom:-30px;width:41%;border-radius:20px;overflow:hidden;border:5px solid var(--branco);box-shadow:0 16px 36px rgba(5,73,120,.26);background:#0b2a3d;aspect-ratio:2/3}
+.f-video video{width:100%;height:100%;object-fit:cover;display:block}
+.f-nome{font-size:clamp(1.9rem,4.2vw,2.9rem);color:var(--azul-esc);letter-spacing:-.02em;margin:12px 0 4px}
+.f-cargo{font-weight:900;color:#0a63b8;font-size:1.02rem;margin-bottom:20px}
+.f-txt p{color:var(--corpo);font-size:1.06rem;margin-bottom:15px}
+.f-txt p b{color:var(--azul-esc)}
+.f-lista{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px}
+.f-lista li{display:flex;gap:12px;align-items:flex-start;font-weight:700;color:var(--azul-esc)}
+.f-lista svg{width:22px;height:22px;flex:none;color:var(--amarelo-esc);margin-top:2px}
+.f-missao{margin-top:24px;padding:24px 26px;border-radius:var(--r);background:linear-gradient(135deg,#054978,#0b6ea0);color:#eaf6fc;font-size:1.05rem}
+.f-missao b{color:#ffef8a;display:block;font-size:.88rem;letter-spacing:.13em;text-transform:uppercase;margin-bottom:8px}
+
 /* ---------- mural / carrossel ---------- */
 .mural{background:var(--branco);padding:var(--s6) 0 var(--s5)}
 .mural-topo{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px}
@@ -320,7 +338,8 @@ h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;line-height:1.05;text-wrap:b
 
 /* ---------- responsivo ---------- */
 @media(max-width:1024px){
-  .hero-grid,.quem-grid,.p-grid,.aval-grid,.e-grid,.c-grid,.ct-grid{grid-template-columns:1fr;gap:38px}
+  .hero-grid,.quem-grid,.p-grid,.aval-grid,.e-grid,.c-grid,.ct-grid,.f-grid{grid-template-columns:1fr;gap:38px}
+  .f-midia{max-width:440px}
   .pilares,.serv-grid,.idade-grid{grid-template-columns:repeat(2,1fr)}
   .ben-grid{grid-template-columns:repeat(2,1fr)}
   .ben-grid>.ben,.ben-grid>.ben:nth-child(4),.ben-grid>.ben:nth-child(5){grid-column:auto}
@@ -347,6 +366,8 @@ h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;line-height:1.05;text-wrap:b
   .e-artes img{aspect-ratio:auto}
   .v-grid{grid-template-columns:repeat(2,1fr);gap:12px}
   .e-artes{grid-template-columns:1fr}
+  .f-video{width:40%;right:-10px;bottom:-16px;border-width:4px}
+  .f-midia{max-width:none}
   .rd-top{grid-template-columns:1fr;gap:28px}
   .acoes .btn{width:100%}
   .hero{padding:44px 0 60px}
@@ -379,6 +400,7 @@ h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;line-height:1.05;text-wrap:b
     </label>
     <nav class="menu" aria-label="Menu principal">
       <a href="#quem-somos">A escola</a>
+      <a href="#fundadora">A fundadora</a>
       <a href="#metodo">Método</a>
       <a href="#servicos">Serviços</a>
       <a href="#turmas">Turmas</a>
@@ -436,6 +458,49 @@ h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;line-height:1.05;text-wrap:b
     </div>
     <div class="quem-foto">
       <img src="img/turma-piscina.webp" alt="Professores e alunos da Acqua Stilo na piscina, incluindo um bebê" width="960" height="720" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ FUNDADORA ============ -->
+<section class="sec funda rev" id="fundadora" aria-labelledby="funda-nome">
+  <div class="wrap f-grid">
+    <div class="f-midia">
+      <div class="f-foto">
+        <img src="img/tatiane.webp" alt="Tatiane Regenold Claro, fundadora da Acqua Stilo, durante entrevista" width="538" height="886" loading="lazy">
+      </div>
+      <div class="f-video">
+        <video src="img/tati-aula.mp4" poster="img/tati-aula-poster.webp" autoplay muted loop playsinline preload="metadata" aria-label="Aula de natação infantil na piscina">
+          <source src="img/tati-aula.webm" type="video/webm">
+          <source src="img/tati-aula.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div>
+      <span class="selo">Quem está por trás</span>
+      <h2 class="f-nome" id="funda-nome">Tatiane Regenold Claro</h2>
+      <p class="f-cargo">Profissional de Educação Física · Fundadora da Acqua Stilo</p>
+      <div class="f-txt">
+        <p>Especialista em educação aquática, atua <b>há mais de uma década</b> na formação de crianças, adultos e profissionais, com um trabalho voltado à segurança aquática, à prevenção do afogamento e ao ensino da natação com metodologia humanizada.</p>
+      </div>
+      <ul class="f-lista">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
+          <span>Idealizadora do Encontro Mato-grossense de Natação</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
+          <span>Coordenadora de projetos de educação aquática</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
+          <span>Palestrante em ensino da natação, desenvolvimento infantil e capacitação profissional</span>
+        </li>
+      </ul>
+      <p class="f-missao">
+        <b>A missão dela</b>
+        Transformar vidas por meio da educação aquática, formando pessoas mais seguras, confiantes e preparadas para viver a água com autonomia, e capacitar profissionais para multiplicarem esse conhecimento e construírem uma cultura de prevenção e segurança.
+      </p>
     </div>
   </div>
 </section>
@@ -886,6 +951,7 @@ h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;line-height:1.05;text-wrap:b
         <h4>Navegue</h4>
         <ul class="rd-links">
           <li><a href="#quem-somos">A escola</a></li>
+          <li><a href="#fundadora">A fundadora</a></li>
           <li><a href="#metodo">Método Acqua Segura</a></li>
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#turmas">Turmas</a></li>
