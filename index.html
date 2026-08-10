@@ -202,6 +202,25 @@ h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;line-height:1.05;text-wrap:b
 .seg-dado span{display:block;margin-top:9px;font-size:.9rem;color:#a8c9da;font-weight:600}
 .seg .acoes{margin-top:24px}
 
+/* ---------- 5 camadas de proteção ---------- */
+.camadas{margin-top:var(--s6);padding-top:var(--s5);border-top:1px solid rgba(143,224,245,.22)}
+.camadas-topo{text-align:center;max-width:70ch;margin:0 auto var(--s5)}
+.camadas-topo h3{font-size:clamp(1.8rem,4vw,2.7rem);color:#fff;letter-spacing:-.02em;margin:12px 0 10px}
+.camadas-topo h3 em{font-style:normal;color:var(--amarelo)}
+.camadas-topo p{color:#cfe7f3;font-size:1.04rem}
+.cam-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.cam{background:rgba(255,255,255,.07);border:1px solid rgba(143,224,245,.24);border-radius:20px;
+  padding:24px 18px;text-align:center;transition:transform .25s ease,background .25s ease}
+.cam:hover{transform:translateY(-6px);background:rgba(255,255,255,.12)}
+.cam-n{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;
+  background:var(--amarelo);color:var(--azul-prof);font:800 .92rem "Baloo 2",sans-serif;margin-bottom:12px}
+.cam-ic{width:62px;height:62px;margin:0 auto 14px;border-radius:18px;display:grid;place-items:center;
+  background:linear-gradient(150deg,rgba(1,182,229,.28),rgba(41,141,255,.16));border:1px solid rgba(143,224,245,.3)}
+.cam-ic svg{width:32px;height:32px;color:#8fe0f5}
+.cam h4{font:800 1.18rem/1.15 "Baloo 2",sans-serif;color:#fff;margin-bottom:8px}
+.cam p{color:#cfe7f3;font-size:.94rem;line-height:1.5}
+.cam-nota{margin:var(--s4) auto 0;text-align:center;color:#a8c9da;font-size:.95rem;font-weight:600;max-width:56ch}
+
 /* ---------- mural / carrossel ---------- */
 .mural{background:var(--branco);padding:var(--s6) 0 var(--s5)}
 .mural-topo{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px}
@@ -368,6 +387,7 @@ h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;line-height:1.05;text-wrap:b
   .hero-grid,.quem-grid,.p-grid,.aval-grid,.e-grid,.c-grid,.ct-grid,.f-grid,.seg-grid{grid-template-columns:1fr;gap:38px}
   .f-midia{max-width:440px}
   .pilares,.serv-grid,.idade-grid{grid-template-columns:repeat(2,1fr)}
+  .cam-grid{grid-template-columns:repeat(3,1fr)}
   .ben-grid{grid-template-columns:repeat(2,1fr)}
   .ben-grid>.ben,.ben-grid>.ben:nth-child(4),.ben-grid>.ben:nth-child(5){grid-column:auto}
   .v-grid{grid-template-columns:repeat(2,1fr)}
@@ -387,6 +407,10 @@ h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;line-height:1.05;text-wrap:b
   .wrap{width:calc(100% - 28px)}
   .aviso-in{flex-direction:column;align-items:flex-start;gap:4px}
   .pilares,.serv-grid,.idade-grid,.e-info,.ben-grid{grid-template-columns:1fr}
+  .cam-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .cam{padding:20px 14px}
+  .cam h4{font-size:1.06rem}
+  .cam p{font-size:.88rem}
   .trilho{scroll-padding-left:14px;padding-inline:14px;margin-inline:-14px}
   .foto{flex:0 0 74vw}
   .setas{display:none}
@@ -687,6 +711,63 @@ h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;line-height:1.05;text-wrap:b
     <div class="seg-foto">
       <img src="img/seguranca.webp" alt="Aluna nadando na piscina acompanhada de perto pelo professor" width="1024" height="819" loading="lazy">
     </div>
+  </div>
+
+  <div class="wrap camadas">
+    <div class="camadas-topo">
+      <span class="selo" style="justify-content:center">Prevenção de afogamento</span>
+      <h3>As 5 camadas <em>de proteção</em></h3>
+      <p>Nenhuma delas sozinha é suficiente. É a soma das cinco que protege de verdade. Quando uma falha, a seguinte segura.</p>
+    </div>
+    <div class="cam-grid">
+
+      <article class="cam">
+        <span class="cam-n">1</span>
+        <div class="cam-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17c1.8-1.1 3.2-1.1 5 0s3.2 1.1 5 0 3.2-1.1 5 0 3.2 1.1 5 0"/><path d="M2 21c1.8-1.1 3.2-1.1 5 0s3.2 1.1 5 0 3.2-1.1 5 0 3.2 1.1 5 0"/><circle cx="16.5" cy="4.5" r="2"/><path d="m5 13 4-3 4 2 3-3"/></svg>
+        </div>
+        <h4>Aprender a nadar</h4>
+        <p>A habilidade que fica para a vida toda. Começa cedo e nunca é tarde para o adulto.</p>
+      </article>
+
+      <article class="cam">
+        <span class="cam-n">2</span>
+        <div class="cam-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9m18 12V9M3 12h18M3 17h18"/><path d="M7 21V8.5M11 21V8.5M15 21V8.5M19 21V8.5"/><path d="M2 9l10-5 10 5"/></svg>
+        </div>
+        <h4>Cercar a piscina</h4>
+        <p>Grade, portão com trava e cobertura. A barreira física impede o acesso sozinho.</p>
+      </article>
+
+      <article class="cam">
+        <span class="cam-n">3</span>
+        <div class="cam-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h4>Supervisionar</h4>
+        <p>Um adulto com olhos na criança, sem celular e sem distração. Perto o bastante para alcançar.</p>
+      </article>
+
+      <article class="cam">
+        <span class="cam-n">4</span>
+        <div class="cam-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8l1.6 6.4A5 5 0 0 1 12.8 16h-1.6a5 5 0 0 1-4.8-6.6L8 3Z"/><path d="M12 3v13M6.6 9.4h10.8"/><path d="M4 20c1.6-.9 2.8-.9 4.4 0s2.8.9 4.4 0 2.8-.9 4.2-.2"/></svg>
+        </div>
+        <h4>Flutuar</h4>
+        <p>Colete salva-vidas de verdade, não boia de brinquedo. E ensinar a criança a boiar sozinha.</p>
+      </article>
+
+      <article class="cam">
+        <span class="cam-n">5</span>
+        <div class="cam-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5s-7.5-4.4-7.5-10a4.4 4.4 0 0 1 7.5-3.1 4.4 4.4 0 0 1 7.5 3.1c0 5.6-7.5 10-7.5 10Z"/><path d="M4.8 12.2h3l1.4-2.4 1.9 4.2 1.5-2.6h6.6"/></svg>
+        </div>
+        <h4>Saber socorrer</h4>
+        <p>Reconhecer o afogamento, tirar da água e saber fazer a reanimação enquanto o socorro chega.</p>
+      </article>
+
+    </div>
+    <p class="cam-nota">Nenhuma camada substitui a outra. A proteção de verdade vem da soma das cinco.</p>
   </div>
 </section>
 
